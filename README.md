@@ -32,6 +32,11 @@ dcos package install dcos-enterprise-cli --yes
 dcos package install elastic --yes
 ```
 
+You can monitor the Elastic deployment with the command below:
+```
+dcos elastic plan status deploy
+```
+
 ### Load Elastic with sample data
 
 First, SSH into your master node. This is where we will pull down our data and load it into Elastic.
@@ -48,7 +53,13 @@ NB: This is a simple dataset of US spending on hospital care by state from 1991-
 TODO
 ```
 
+Run the below command to load the dataset in bulk to the `expenditure` index and `hospital` type in the Elastic cluster.
 
+```
+curl -s -H "Content-Type: application/x-ndjson" \
+-XPOST http://coordinator.elastic.l4lb.thisdcos.directory:9200/expenditure/hospital/_bulk \
+--data-binary "@expenditure-data.json"
+```
 
 
 
