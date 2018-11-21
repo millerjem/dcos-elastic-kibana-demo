@@ -47,10 +47,10 @@ dcos node ssh --master-proxy --leader
 
 Next, we will pull down the sample data we will use. 
 
-NB: This is a simple dataset of US spending on hospital care by state from 1991-2014. This dataset was selected because it's a universally understandable metric and lends itself to both geographical and time series visualizations.
+NB: This is a simple dataset of US spending on hospital care by state from 2008-2014. This dataset was selected because health spending a universally understandable metric and lends itself to both geographical and time series visualizations.
 
 ```
-TODO
+curl -O https://raw.githubusercontent.com/tbaums/dcos-elastic-kibana-demo/master/expenditure-data.json
 ```
 
 Run the below command to load the dataset in bulk to the `expenditure` index and `hospital` type in the Elastic cluster.
