@@ -61,13 +61,14 @@ curl -s -H "Content-Type: application/x-ndjson" \
 --data-binary "@expenditure-data.json"
 ```
 
+**Don't forget to logout of your SSH session**
 
 
 ## Install Kibana
 
 ### Prepare Kibana config file
 
-Save the JSON blob below as `kibana-config.json` to pass as options when we install Kibana.
+On your local machine, save the JSON blob below as `kibana-config.json` to pass as options when we install Kibana.
 
 ```
 {
@@ -88,7 +89,7 @@ Then, run the below command to install Kibana on the cluster:
 ```
 dcos package install kibana  --yes --options=kibana-config.json
 ```
-
+### Load Kibana dashboard
 
 
 
