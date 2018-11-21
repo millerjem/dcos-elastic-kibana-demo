@@ -40,6 +40,16 @@ First, SSH into your master node. This is where we will pull down our data and l
 dcos node ssh --master-proxy --leader
 ```
 
+Next, we will pull down the sample data we will use. 
+
+NB: This is a simple dataset of US spending on hospital care by state from 1991-2014. This dataset was selected because it's a universally understandable metric and lends itself to both geographical and time series visualizations.
+
+```
+TODO
+```
+
+
+
 
 
 ## Install Kibana
@@ -67,6 +77,7 @@ Then, run the below command to install Kibana on the cluster:
 ```
 dcos package install kibana  --yes --options=kibana-config.json
 ```
+
 
 
 
